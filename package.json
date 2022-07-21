@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate-branch-name": "validate-branch-name"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx validate-branch-name"
+      "pre-commit": "npm run validate-branch-name"
     }
   },
   "validate-branch-name": {
