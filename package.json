@@ -1,0 +1,24 @@
+{
+  "name": "test-branch-pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "validate-branch-name": "^1.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "validate-branch-name"
+    }
+  },
+  "validate-branch-name": {
+    "pattern": "(feature|release|hotfix)/(JIRA-\\d+/)?[a-z-]+",
+    "errorMsg": "Your branch name is wrong"
+  }
+}
